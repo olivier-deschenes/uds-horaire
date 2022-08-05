@@ -90,23 +90,35 @@ function App() {
   }
 
   return (
-    <div className={'container mx-auto flex flex-col'}>
-      <table className={'classes-table table-auto text-center m-5'}>
-        <caption className={'table-caption text-xl mb-3 font-bold'}>Informatique de Gestion</caption>
-        <thead>
-        <tr>
-          {managementClasses.map((c) => (<th>{c.name}</th>))}
-        </tr>
-        <tr>
-          {managementClasses.map((c) => (<th>{c.trimester}</th>))}
-        </tr>
-        </thead>
-        <tbody>
-        {
-         generateTable(managementClasses)
-        }
-        </tbody>
-      </table>
+    <div className={'flex flex-col container mx-auto h-screen'}>
+      <div className={'flex flex-col'}>
+        <table className={'classes-table table-auto text-center'}>
+          <caption className={'table-caption text-xl mb-3 font-bold'}>Informatique de Gestion</caption>
+          <thead>
+          <tr>
+            {managementClasses.map((c) => (<th>{c.name}</th>))}
+          </tr>
+          <tr>
+            {managementClasses.map((c) => (<th>{c.trimester}</th>))}
+          </tr>
+          </thead>
+          <tbody>
+          {
+            generateTable(managementClasses)
+          }
+          </tbody>
+        </table>
+      </div>
+      <footer className={'flex flex-col mt-auto p-2 items-center'}>
+        <div>
+          <span>Olivier Deschênes — </span>
+          <a
+            href={'https://github.com/olivier-deschenes/uds-horaire'}
+            className={'text-blue-600 hover:underline font-mono'}
+            target={'_blank'}
+          >Repo</a>
+        </div>
+      </footer>
     </div>
   )
 }
