@@ -1,0 +1,24 @@
+.classes-table th,
+.classes-table td {
+    @apply border border-slate-500;
+}
+
+.classes-table *[data-empty="true"] {
+    @apply bg-slate-500;
+}
+
+.classes-table tr:first-of-type th {
+    @apply bg-slate-400;
+}
+
+.classes-table tr:not(:first-of-type) th {
+    @apply bg-slate-200;
+}
+
+.classes-table tr:last-of-type th {
+    @apply border-b-4;
+}
+
+.classes-table *[data-class-type="option"] {
+    @apply bg-slate-200;
+}
